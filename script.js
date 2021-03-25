@@ -23,7 +23,7 @@ let eventFunc = function (e) {
         let pro = prompt("How many sqaures would you like?");
         num = parseInt(pro);
     } while (isNaN(num));
-    num = Math.min(num, 1000);
+    num = Math.min(num, 5000);
     num = Math.abs(num);
     populateGrid(num);
 };
