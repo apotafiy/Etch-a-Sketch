@@ -9,7 +9,12 @@ const populateGrid = function (num) {
     for (let i = 0; i < num; i++) {
         let newChild = document.createElement("div");
         let changeColor = function (e) {
-            newChild.style = "background-color: red;";
+            let r = Math.random() * 255;
+            let g = Math.random() * 255;
+            let b = Math.random() * 255;
+            newChild.style = `background-color: rgb(${Math.floor(r)}, ${Math.floor(
+                g
+            )}, ${Math.floor(b)});`;
         };
         newChild.addEventListener("mouseenter", changeColor);
         fullGrid.appendChild(newChild);
